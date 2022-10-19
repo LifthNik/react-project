@@ -3,7 +3,7 @@ import {urls} from "../config/urls";
 
 let movieService = {
 
-    getAllMovies: () => axiosInstance.get(urls.movies),
+    getAllMovies: (page=1) => axiosInstance.get(urls.movies, {params: {page}}),
 
     getAllGenres: () => axiosInstance.get(urls.genres),
 };

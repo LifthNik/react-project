@@ -1,15 +1,23 @@
 import './App.css';
-
 import Movies from "./components/moviesList/movies";
+import {Route, Routes} from "react-router-dom";
+import MainLayout from "./components/pages/mainLayout";
+
+
+
 
 function App() {
-  return (
-    <div className="App">
+    return (
+        <Routes>
 
-      <Movies/>
+            <Route path={'/'} element={<Movies/>}>
 
-    </div>
-  );
+
+
+            </Route>
+
+        </Routes>
+    );
 }
 
 export default App;
