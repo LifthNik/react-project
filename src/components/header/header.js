@@ -1,7 +1,17 @@
+import User from "../userInfo/User.info";
+
 export default function Header () {
 
     return (<div className = 'Header'>
-                Header
+
+
+            <input type="text"/>
+
+            <User/>
+
+
+            
+            
         </div>
     );
 };
