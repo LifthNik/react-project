@@ -3,13 +3,12 @@ import {useEffect, useState} from "react";
 
 import {movieService} from "../../services";
 import Movie from "../movieListCard/movie";
-
+import {genreService} from "../../services/genres.service";
 
 
 export default function Movies () {
 
     let [movies, setMovies] = useState([]);
-
     let [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
@@ -18,15 +17,16 @@ export default function Movies () {
 
     }, [query]);
 
+
+
     let [genres, setGenres] = useState([])
 
     useEffect(() => {
 
-        movieService.getAllGenres().then(value => setGenres(value.data));
+        genreService.getAllGenres().then(value => setGenres(value.data));
 
     }, []);
 
-    console.log(genres)
 
 
     let nextPage = () => {
@@ -36,6 +36,7 @@ export default function Movies () {
     let prevPage = () => {
         setQuery(value => ({page: value.get('page') - 1}))
     };
+
 
     return (<div className='Movies'>
 
@@ -48,8 +49,8 @@ export default function Movies () {
             <button disabled={+query.get('page') > 499} onClick={nextPage}>Next</button>
 
         </div>
-
     );
 };
+
 
 export {Movies}

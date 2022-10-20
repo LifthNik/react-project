@@ -5,7 +5,6 @@ let movieService = {
 
     getAllMovies: (page=1) => axiosInstance.get(urls.movies, {params: {page}}),
 
-    getAllGenres: () => axiosInstance.get(urls.genres),
 };
 
 export {
