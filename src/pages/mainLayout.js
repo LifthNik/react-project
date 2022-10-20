@@ -1,6 +1,6 @@
-import Header from "../components/header/header";
+import Header from "../components/header/Header";
 import {Outlet} from "react-router-dom";
-import Movies from "../components/moviesList/movies";
+import Movies from "../components/moviesList/Movies";
 
 export default function MainLayout () {
 

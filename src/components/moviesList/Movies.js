@@ -2,8 +2,10 @@ import {useSearchParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import {movieService} from "../../services";
-import Movie from "../movieListCard/movie";
 import {genreService} from "../../services/genres.service";
+
+import Movie from "../movieListCard/Movie";
+
 
 
 export default function Movies () {

@@ -1,5 +1,5 @@
 import './App.css';
-import Movies from "./components/moviesList/movies";
+import Movies from "./components/moviesList/Movies";
 import {Route, Routes} from "react-router-dom";
 import MainLayout from "./pages/mainLayout";
 

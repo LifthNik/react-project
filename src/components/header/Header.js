@@ -1,4 +1,4 @@
-import User from "../userInfo/User.info";
+import User from "../userInfo/UserInfo";
 
 export default function Header () {
 
