@@ -2,18 +2,36 @@ import PosterPreview from "../posterPreview/PosterPreview";
 
 export default function Movie ({movie}) {
 
-    let {original_title, poster_path, vote_average} = movie;
+    let {title, original_title, original_language,
+        poster_path, vote_average, release_date,
+        popularity, vote_count} = movie;
 
     return (<div className='Movie'>
 
-                <PosterPreview title={original_title} poster={poster_path}/>
+                <PosterPreview title={title} poster={poster_path}/>
 
             <div>
-                {original_title}
+                {title}
+            </div>
+
+            <div>
+                Original Title: {original_title} ({original_language})
             </div>
 
             <div>
                 Stars: {vote_average}
+            </div>
+
+            <div>
+                {vote_count} votes
+            </div>
+
+            <div>
+                Release Date: {release_date}
+            </div>
+
+            <div>
+                Popularity: {popularity}
             </div>
 
         </div>
