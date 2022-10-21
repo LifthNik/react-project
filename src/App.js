@@ -1,9 +1,6 @@
-import './App.css';
-import Movies from "./components/moviesList/Movies";
 import {Route, Routes} from "react-router-dom";
+
 import MainLayout from "./pages/mainLayout";
-
-
 
 
 function App() {
@@ -11,8 +8,6 @@ function App() {
         <Routes>
 
             <Route path={'/'} element={<MainLayout/>}>
-
-
 
             </Route>
 

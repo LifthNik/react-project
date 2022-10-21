@@ -1,0 +1,10 @@
+.Movie{
+    display: flex;
+    flex-direction: column;
+
+    width: 19%;
+    height: auto;
+
+    border: 1px solid;
+    margin: 5px;
+}

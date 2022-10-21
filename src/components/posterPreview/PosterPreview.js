@@ -1,12 +1,13 @@
 import {posterURL} from "../../config/urls";
 
+import css from './Poster.module.css'
 
 export default function PosterPreview ({poster,title}) {
 
 
-    return (<div className = 'PosterPreview'>
+    return (<div className ={css.PosterPreview}>
 
-            <img src={`${posterURL + poster}`} alt={title}/>
+            <img className={css.img} src={`${posterURL + poster}`} alt={title}/>
 
         </div>
     );
