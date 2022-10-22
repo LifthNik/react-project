@@ -23,15 +23,11 @@ export default function Movies () {
 
 
 
-    let [genres, setGenres] = useState([])
-
-    useEffect(() => {
-
-        genreService.getAllGenres().then(value => setGenres(value.data));
-
-    }, []);
-
-
+    // let [genres, setGenres] = useState([])
+    //
+    // useEffect(() => {
+    //     genreService.getAllGenres().then(value => setGenres(value.data));
+    // }, []);
 
     let nextPage = () => {
         setQuery(value => ({page: +value.get('page') + 1}))
