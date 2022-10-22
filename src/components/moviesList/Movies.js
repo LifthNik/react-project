@@ -2,7 +2,6 @@ import {useSearchParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import {movieService} from "../../services";
-import {genreService} from "../../services/genres.service";
 
 import Movie from "../movieListCard/Movie";
 import css from "./Movies.module.css"
@@ -21,13 +20,6 @@ export default function Movies () {
 
     }, [query]);
 
-
-
-    // let [genres, setGenres] = useState([])
-    //
-    // useEffect(() => {
-    //     genreService.getAllGenres().then(value => setGenres(value.data));
-    // }, []);
 
     let nextPage = () => {
         setQuery(value => ({page: +value.get('page') + 1}))
