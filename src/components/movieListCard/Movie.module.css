@@ -3,8 +3,17 @@
     flex-direction: column;
 
     width: 19%;
-    height: auto;
 
-    border: 1px solid;
-    margin: 5px;
+    margin-bottom: 5px;
 }
+
+.title{
+    color: #6697af;
+    font-size: 20px;
+}
+
+.release_date{
+    font-size: 13px;
+    color: #868686;
+}
+

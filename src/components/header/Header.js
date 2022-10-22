@@ -1,19 +1,25 @@
-import User from "../userInfo/UserInfo";
-
 import css from "./Header.module.css"
+
+import User from "../userInfo/UserInfo";
+import ThemeSwitcher from "../themeSwicher/ThemeSwither";
+import SignUp from "../signUp/SignUp";
 
 export default function Header () {
 
-    return (<div className ={css.Header}>
+    return (<div className={css.Header}>
 
+            <div className={css.headerLeft}>
 
-            <input type="text"/>
+                <SignUp/>
+
+                <ThemeSwitcher/>
+
+            </div>
+
+                <div className={css.title}>Big WebSite Title</div>
 
             <User/>
 
-
-            
-            
         </div>
     );
 };

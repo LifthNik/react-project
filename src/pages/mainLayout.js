@@ -3,13 +3,18 @@ import {Outlet} from "react-router-dom";
 import Header from "../components/header/Header";
 import Movies from "../components/moviesList/Movies";
 
-import css from "./MainLayout.module.css"
+import {useSelector} from "react-redux";
+import Search from "../components/search/Search";
 
 export default function MainLayout () {
 
-    return (<div className={css.MainLayout}>
+    let {background} = useSelector(state => state.theme);
+
+    return (<div style={{background:background}}>
 
             <Header/>
+
+            <Search/>
 
             <Movies/>
 
