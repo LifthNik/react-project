@@ -11,30 +11,16 @@ import './index.css';
 
 let store = setupStore()
 
-let initialThemes = {
-    light: {
-        background: "",
-    },
-    dark: {
-        background: "",
-    }
-}
-
-let ThemeSwitcher = createContext(initialThemes)
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-
-
 <Provider store={store}>
 <BrowserRouter>
-    <ThemeSwitcher.Provider value={initialThemes}>
 
     <App/>
 
-    </ThemeSwitcher.Provider>
 </BrowserRouter>
 </Provider>
 );
