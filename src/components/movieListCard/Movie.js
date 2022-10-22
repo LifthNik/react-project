@@ -1,16 +1,18 @@
-import PosterPreview from "../posterPreview/PosterPreview";
-
 import css from "./Movie.module.css"
-import ReactStars from "react-rating-stars-component/dist/react-stars";
+
+import PosterPreview from "../posterPreview/PosterPreview";
+import StarRating from "../starRating/StarRating";
+
 
 export default function Movie ({movie}) {
 
-    let {title,original_language, poster_path, release_date, genre_ids,
-        vote_average} = movie;
+    let {title,original_language, poster_path,
+        release_date, genre_ids} = movie;
+
 
     return (<div className={css.Movie}>
 
-                <PosterPreview title={title} poster={poster_path}/>
+            <PosterPreview title={title} poster={poster_path}/>
 
             <div className={css.title}>
                 {title}
@@ -24,6 +26,7 @@ export default function Movie ({movie}) {
                 Genres Here
             </div>
 
+            <StarRating movie={movie}/>
 
 
         </div>
@@ -31,5 +34,5 @@ export default function Movie ({movie}) {
 };
 
 export {
-    Movie,
+    Movie
 }
