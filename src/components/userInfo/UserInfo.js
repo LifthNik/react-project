@@ -1,4 +1,4 @@
-import css from './userInfo.module.css'
+import css from './UserInfo.module.css'
 
 export default function User () {
 

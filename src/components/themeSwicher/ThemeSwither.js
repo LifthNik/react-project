@@ -3,11 +3,14 @@ import {useDispatch} from "react-redux";
 
 import {themeActions} from "../../redux";
 
+
 export default function ThemeSwitcher () {
+
 
     let [theme, setTheme] = useState(false);
 
     let dispatch = useDispatch();
+
 
     return (<div className = 'ThemeSwitcher'>
 

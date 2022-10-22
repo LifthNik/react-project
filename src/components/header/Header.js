@@ -16,7 +16,7 @@ export default function Header () {
 
             </div>
 
-                <div className={css.title}>Big WebSite Title</div>
+                <div className={css.title}>Big WebSite Title Component</div>
 
             <User/>
 

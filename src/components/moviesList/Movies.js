@@ -42,14 +42,19 @@ export default function Movies () {
     };
 
 
+
     return (<div className={css.Movies}>
 
             {
                 movies.results?.map(movie => <Movie key={movie.id} movie={movie}/>)
             }
+
             <div className='page_buttons'>
+
                 <button disabled={+query.get('page') < 2} onClick={prevPage}>prev</button>
+
                 <button disabled={+query.get('page') > 499} onClick={nextPage}>Next</button>
+
             </div>
         </div>
     );
