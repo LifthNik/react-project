@@ -3,11 +3,12 @@ import {useEffect, useState} from "react";
 
 import {genreAction} from "../../redux";
 
-import css from './GenreBarge.module.css'
-
 import { Badge } from 'reactstrap';
 
+import css from './GenreBarge.module.css'
+
 export default function GenreBarge ({movie}) {
+
 
     let dispatch = useDispatch();
 
@@ -24,7 +25,9 @@ export default function GenreBarge ({movie}) {
 
     return (<div className = {css.MovieGenres}>
 
-            {genreBarge.map((item,index) => (<div key={index} className={css.GenreBarge}> <Badge color="primary" pill={true}>{item}</Badge></div>))}
+            {genreBarge.map((item,index) => (<div key={index} className={css.GenreBarge}>
+                <Badge color="primary" pill={true}>{item}</Badge>
+            </div>))}
 
         </div>
     );
