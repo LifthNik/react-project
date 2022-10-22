@@ -2,6 +2,8 @@ import {useState} from "react";
 import {useDispatch} from "react-redux";
 
 import {themeActions} from "../../redux";
+import {Button} from "reactstrap";
+
 
 
 export default function ThemeSwitcher () {
@@ -16,15 +18,15 @@ export default function ThemeSwitcher () {
 
             {!theme ?
 
-                <button onClick={() => {
+                <Button color={'light'} onClick={() => {
                     setTheme(true)
                     dispatch(themeActions.darkTheme())
-                }}>Switch To Dark Mode</button> :
+                }}>Dark Mode</Button> :
 
-                <button onClick={() => {
+                <Button color={'light'} onClick={() => {
                     setTheme(false)
                     dispatch(themeActions.lightTheme());
-                }}>Switch To Light Mode</button>}
+                }}>Light Mode</Button>}
 
         </div>
     );

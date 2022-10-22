@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router-dom";
 
-import MainLayout from "./pages/MainLayout";
+import MainLayout from "./pages/MainLayout/MainLayout";
 
 
 function App() {

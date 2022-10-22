@@ -15,7 +15,7 @@ export default function GenreBarge ({movie}) {
     let [genres, setGenres] = useState([]);
 
     useEffect(()=>{
-        dispatch(genreAction.getGenre()).then(({payload})=> setGenres(payload.genres))
+        dispatch(genreAction.getGenres()).then(({payload})=> setGenres(payload.genres))
     },[])
 
     let genreBarge = genres.filter(genre=>movie.genre_ids.includes(genre.id)).map(data=>data.name)

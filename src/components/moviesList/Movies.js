@@ -30,7 +30,6 @@ export default function Movies () {
     };
 
 
-
     return (<div className={css.Movies}>
 
             {

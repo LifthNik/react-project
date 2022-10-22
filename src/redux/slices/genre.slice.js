@@ -3,16 +3,16 @@ import {genreService} from "../../services/genres.service";
 
 let initialState = [];
 
-let getGenre = createAsyncThunk(
+let getGenres = createAsyncThunk(
 
     'getGenre',
 
-    async (_, {rejectedWithValue}) => {
+    async (_, {rejected}) => {
         try {
             let {data} = await genreService.getAllGenres();
             return data;
         } catch (e) {
-            return rejectedWithValue(e.response.data);
+            return rejected(e.response.data);
         }
     }
 );
@@ -25,7 +25,7 @@ let genreSlice = createSlice({
 let {reducer: genreReducer} = genreSlice;
 
 let genreAction = {
-    getGenre
+    getGenres
 };
 
 export {
