@@ -5,38 +5,33 @@ let initialState = {
     movies: [],
 };
 
-let getAllMovies = createAsyncThunk(
-    'moviesSlice',
-    async (_, {reject}) => {
-
+let getAll = createAsyncThunk(
+    'getAll',
+    async (_, {reject, dispatch}) => {
         try {
             let {data} = await movieService.getAllMovies()
             return data
-
-        }
-        catch (e) {
+        } catch (e) {
             return reject(e.response.data)
         }
-
     }
-)
+);
 
-let moviesSlice = createSlice({
-
-    name: 'moviesSlice',
+let movieSlice = createSlice({
+    name: 'movieSlice',
     initialState,
-
-    Reducers: {
-        [getAllMovies.fulfilled]: (state, action) => {
+    reducers: {
+        allWithDispatch: (state, action) => {
             state.movies = action.payload
         },
-    },
+    }
+
 });
 
-let {reducer: moviesReducer} = moviesSlice;
+let {reducer: moviesReducer} = movieSlice;
 
 let moviesAction = {
-    getAllMovies,
+    getAll,
 }
 
 export {

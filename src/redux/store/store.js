@@ -6,7 +6,7 @@ import {genreReducer} from "../slices/genre.slice";
 
 let mainReducer = combineReducers({
 
-    movies:moviesReducer,
+    movieS:moviesReducer,
     theme:themeReducer,
     genre:genreReducer
 
