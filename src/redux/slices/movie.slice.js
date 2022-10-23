@@ -3,8 +3,6 @@ import {movieService} from "../../services";
 
 let initialState = {
    movies: [],
-    page: 1,
-
 };
 
 
@@ -12,11 +10,9 @@ let getAllMovies = createAsyncThunk(
 
     'getAllMovies',
 
-    async ({page}, {rejectWithValue,}) => {
+    async (page, {rejectWithValue,}) => {
         try {
             let {data} = await movieService.getAllMovies(page)
-
-            console.log(page)
 
             return data
         } catch (e) {
@@ -27,8 +23,8 @@ let getAllMovies = createAsyncThunk(
 let movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
-    extraReducers:{
-        [getAllMovies.fulfilled]: (state,action) => {
+    extraReducers: {
+        [getAllMovies.fulfilled]: (state, action) => {
             state.movies = action.payload
         }
     }
@@ -37,7 +33,7 @@ let movieSlice = createSlice({
 let {reducer: movieReducer} = movieSlice;
 
 let movieAction = {
-    getAllMovies
+    getAllMovies,
 };
 
 export {
