@@ -1,15 +1,14 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
+
+import {movieAction} from "../../redux";
 
 import Movie from "../movieListCard/Movie";
 import css from "./Movies.module.css"
 
-import {movieAction} from "../../redux";
-import {useSearchParams} from "react-router-dom";
-
 
 export default function Movies() {
-
 
     let {movies} = useSelector(state => state.movie);
 
@@ -18,18 +17,12 @@ export default function Movies() {
     let [query, setQuery] = useSearchParams({page: '1'});
 
 
-
-    useEffect(()=>{
+    useEffect(() => {
 
         dispatch(movieAction.getAllMovies(query.get('page')));
 
-    },[dispatch, query])
+    }, [dispatch, query]);
 
-
-    // useEffect(() => {
-    //     movieService.getAllMovies(query.get('page')).then(value => setQuery(value.data));
-    //
-    // }, [query]);
 
     let nextPage = () => {
         setQuery(value => ({page: +value.get('page') + 1}))
