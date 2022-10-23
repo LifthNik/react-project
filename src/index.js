@@ -6,8 +6,10 @@ import {Provider} from "react-redux";
 import {setupStore} from "./redux";
 
 import App from './App';
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 let store = setupStore()
@@ -17,7 +19,6 @@ root.render(
 
 <Provider store={store}>
 <BrowserRouter>
-
     <App/>
 
 </BrowserRouter>

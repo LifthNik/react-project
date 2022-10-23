@@ -1,12 +1,23 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 
-import {themeActions} from "../../redux";
-import {Button} from "reactstrap";
+import {Button, createTheme, FormControlLabel, FormGroup, Switch, ThemeProvider} from "@mui/material";
+import css from './ThemeSwitcher.module.css'
 
+import {themeActions} from "../../redux";
 
 
 export default function ThemeSwitcher () {
+
+
+    const buttonThemeColor = createTheme({
+        palette: {
+            primary: {
+                main: '#000000',
+                darker: '#000000',
+            },
+        },
+    });
 
 
     let [theme, setTheme] = useState(false);
@@ -14,21 +25,28 @@ export default function ThemeSwitcher () {
     let dispatch = useDispatch();
 
 
-    return (<div className = 'ThemeSwitcher'>
+    return (
+        <ThemeProvider theme={buttonThemeColor}>
 
-            {!theme ?
+            <div className={css.ThemeSwitcher}>
 
-                <Button color={'light'} onClick={() => {
-                    setTheme(true)
-                    dispatch(themeActions.darkTheme())
-                }}>Dark Mode</Button> :
+                {!theme ?
 
-                <Button color={'light'} onClick={() => {
-                    setTheme(false)
-                    dispatch(themeActions.lightTheme());
-                }}>Light Mode</Button>}
+                    <Button variant="contained" color={'primary'} size={"small"} onClick={() => {
+                        setTheme(true)
+                        dispatch(themeActions.darkTheme())
+                    }}>Dark Mode</Button>
 
-        </div>
+                    :
+
+                    <Button variant="contained" color={'primary'} size={"small"} onClick={() => {
+                        setTheme(false)
+                        dispatch(themeActions.lightTheme());
+                    }}>Light Mode</Button>}
+
+            </div>
+
+        </ThemeProvider>
     );
 };
 

@@ -6,13 +6,14 @@ import MainLayout from "./pages/MainLayout/MainLayout";
 function App() {
     return (
 
-        <Routes>
+        < Routes >
 
-            <Route path={'/'} element={<MainLayout/>}>
+        < Route path={'/'} element={<MainLayout/>}>
 
             </Route>
 
         </Routes>
+
     );
 }
 
