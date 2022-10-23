@@ -7,7 +7,7 @@ let initialState = {
 
 let getAll = createAsyncThunk(
     'getAll',
-    async (_, {reject, dispatch}) => {
+    async (_, {reject}) => {
         try {
             let {data} = await movieService.getAllMovies()
             return data
