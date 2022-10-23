@@ -11,8 +11,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
-let store = setupStore()
+let store = setupStore();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

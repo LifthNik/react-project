@@ -4,7 +4,7 @@ let posterURL = 'https://image.tmdb.org/t/p/w500'
 let urls = {
 
     movies: '/discover/movie',
-    search: '/search/movie',
+    search: '/search/keyword?query=',
     genres: '/genre/movie/list',
 
 }

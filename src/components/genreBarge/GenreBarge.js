@@ -9,10 +9,10 @@ import css from './GenreBarge.module.css'
 
 export default function GenreBarge ({movie}) {
 
+    let [genres, setGenres] = useState([]);
 
     let dispatch = useDispatch();
 
-    let [genres, setGenres] = useState([]);
 
     useEffect(()=>{
         dispatch(genreAction.getGenres()).then(({payload})=> setGenres(payload.genres))
