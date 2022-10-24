@@ -7,10 +7,11 @@ export default function StarRating ({movie}) {
     return (<div className = 'StarRating'>
 
             <ReactStars
+
                 count={10}
                 value={vote_average}
                 isHalf={true}
-                edit={true}
+                edit={false}
                 size={25}
                 />
 

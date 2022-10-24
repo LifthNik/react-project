@@ -1,0 +1,21 @@
+.SingleMovie{
+    padding: 5%;
+}
+.MovieInfo{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 5px;
+}
+.poster{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+.description{
+    margin: 10px;
+}
+
+.overview{
+    margin-top: 5px ;
+}

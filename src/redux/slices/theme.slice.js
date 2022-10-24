@@ -2,6 +2,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 let initialState = {
     background: 'white',
+    color: '#000000',
+
 }
 
 let themeSwitcher = createSlice({
@@ -10,9 +12,11 @@ let themeSwitcher = createSlice({
     reducers: {
         lightTheme: (state, action) => {
             state.background = "white";
+            state.color = "#000000"
         },
         darkTheme: (state, action) => {
-            state.background = "#020531"
+            state.background = "#020531";
+            state.color = "#ffffff"
         }
     }
 });
