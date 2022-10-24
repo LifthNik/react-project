@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, } from "react";
 
@@ -23,10 +23,13 @@ export default function SingleMovie () {
         if (id) dispatch(movieAction.getMovie(id))
     }, [id])
 
+    let navigate = useNavigate();
 
     return (<div className='SingleMovie'>
 
             <Header/>
+
+            <button className='backButton' onClick={() => navigate(-1)}>Back</button>
 
             {movie ? <div className='MovieInfo'>
 
