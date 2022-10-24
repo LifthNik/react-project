@@ -6,7 +6,7 @@ let initialState = {
 
 }
 
-let themeSwitcher = createSlice({
+let themeSlice = createSlice({
     name: 'themeSwitcher',
     initialState,
     reducers: {
@@ -23,14 +23,14 @@ let themeSwitcher = createSlice({
 
 let {reducer: themeReducer, actions: {
     lightTheme, darkTheme
-}} = themeSwitcher;
+}} = themeSlice;
 
 let themeActions = {
     lightTheme, darkTheme,
 }
 
 export {
-    themeSwitcher,
+    themeSlice,
     themeReducer,
     themeActions
 }

@@ -19,7 +19,7 @@ export default function GenreBarge ({movie}) {
     },[])
 
     let genreBarge = genres.filter(genre=>movie.genre_ids.includes(genre.id)).map(data=>data.name)
-    genreBarge.length = 2;
+    genreBarge.length = 3;
 
 
 

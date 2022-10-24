@@ -4,8 +4,6 @@ import GenreBarge from "../genreBarge/GenreBarge";
 
 import css from "./Movie.module.css"
 import {Link} from "react-router-dom";
-import SingleMovie from "../movieInfo/SingleMovie";
-
 
 
 export default function Movie ({movie}) {

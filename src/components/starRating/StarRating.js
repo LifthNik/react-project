@@ -12,7 +12,7 @@ export default function StarRating ({movie}) {
                 value={vote_average}
                 isHalf={true}
                 edit={false}
-                size={25}
+                size={20}
                 />
 
         </div>

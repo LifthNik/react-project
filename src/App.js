@@ -9,10 +9,10 @@ import {useSelector} from "react-redux";
 
 function App() {
 
-    let {background} = useSelector(state => state.theme);
+    let {background, color} = useSelector(state => state.theme);
 
     return (
-<div style={{background:background}} className={css.mainLayout}>
+<div style={{background:background, color:color}} className={css.mainLayout}>
         < Routes >
 
         <Route path={'/'} element={<MainLayout/>}/>
