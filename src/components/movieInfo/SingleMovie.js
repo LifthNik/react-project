@@ -29,7 +29,7 @@ export default function SingleMovie () {
 
             <Header/>
 
-            <button className='backButton' onClick={() => navigate(-1)}>Back</button>
+            <button className='backButton' onClick={()=> navigate(-1)}>Back</button>
 
             {movie ? <div className='MovieInfo'>
 
