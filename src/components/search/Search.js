@@ -9,21 +9,13 @@ export default function Search () {
 
     let [request, setRequest] = useState("");
 
+    let dispatch = useDispatch();
+
     useEffect(() => {
         if (request) {
             dispatch(movieAction.searchMovie(request));
         }
     }, [request]);
-
-    let dispatch = useDispatch();
-
-    let cleanSearchField = (event) =>{
-        event.preventDefault();
-        if (request) {
-            dispatch(movieAction.searchMovie(request))
-        }
-        setRequest("")
-    }
 
 
     return (<div className={css.searchInput}>
@@ -34,8 +26,6 @@ export default function Search () {
                    onChange={(event) => setRequest(event.target.value)}
                    value={request}
             />
-
-            <button className='cleanSearch' onClick={cleanSearchField}>Clean</button>
 
         </div>
     );
