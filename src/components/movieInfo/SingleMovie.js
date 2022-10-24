@@ -1,15 +1,14 @@
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import {useEffect, } from "react";
 
-import {genreAction, movieAction as movieActions} from "../../redux";
+import {movieAction} from "../../redux";
+import {posterURL} from "../../config/urls";
 
 import Header from "../header/Header";
 
 import css from './SingleMovie.css'
-import {posterURL} from "../../config/urls";
 import ReactStars from "react-rating-stars-component";
-import {Badge} from "reactstrap";
 
 
 export default function SingleMovie () {
@@ -21,19 +20,8 @@ export default function SingleMovie () {
     let {id} = useParams();
 
     useEffect(() => {
-        if (id) dispatch(movieActions.getMovie(id))
+        if (id) dispatch(movieAction.getMovie(id))
     }, [id])
-
-
-
-    let [genres, setGenres] = useState([]);
-
-    useEffect(()=>{
-        dispatch(genreAction.getGenres()).then(({payload})=> setGenres(payload.genres))
-    },[])
-
-    let genreBarge = genres.filter(genre=>movie.genre_ids.includes(genre.id)).map(data=>data.name)
-
 
 
     return (<div className='SingleMovie'>
@@ -57,12 +45,6 @@ export default function SingleMovie () {
                                 edit={true}
                                 size={25}
                             />
-                        </div>
-
-                        <div>
-                        {genreBarge.map((item,index) => (<div key={index} className='genre'>
-                            <Badge color="primary" pill={true}>{item}</Badge>
-                        </div>))}
                         </div>
 
                         <div className='release_date'>
