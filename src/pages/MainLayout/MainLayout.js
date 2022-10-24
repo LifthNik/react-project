@@ -8,7 +8,7 @@ import Movies from "../../components/moviesList/Movies";
 export default function MainLayout () {
 
 
-    return (<div >
+    return (<div className='mainLayout'>
 
             <Header/>
 

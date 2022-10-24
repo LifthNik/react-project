@@ -1,9 +1,8 @@
-import css from "./Header.module.css"
-
 import User from "../userInfo/UserInfo";
 import ThemeSwitcher from "../themeSwicher/ThemeSwither";
 import SignUp from "../signUp/SignUp";
 
+import css from "./Header.module.css"
 export default function Header () {
 
     return (<div className={css.Header}>

@@ -5,7 +5,6 @@ let initialState = {
     movies: [],
 };
 
-
 let getAllMovies = createAsyncThunk(
 
     'getAllMovies',

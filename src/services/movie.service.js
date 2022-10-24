@@ -1,5 +1,5 @@
 import {axiosInstance} from "./axios.service";
-import {urls} from "../config/urls";
+import {urls} from "../config";
 
 let movieService = {
 

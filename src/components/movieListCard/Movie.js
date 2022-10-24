@@ -18,7 +18,6 @@ export default function Movie ({movie}) {
 
         <Link className={css.Movie} to={`/movie/${movie.id}`}>
 
-
             <div className='movieCard'>
 
                 <PosterPreview title={title} poster={poster_path}/>
@@ -36,6 +35,7 @@ export default function Movie ({movie}) {
                 <StarRating movie={movie}/>
 
             </div>
+
         </Link>
     );
 };

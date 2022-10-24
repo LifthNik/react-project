@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
-import {Link} from "react-router-dom";
 
 import {movieAction} from "../../redux";
 import css from './Search.module.css'
+
 
 export default function Search () {
 
@@ -25,6 +25,7 @@ export default function Search () {
         setRequest("")
     }
 
+
     return (<div className={css.searchInput}>
 
             <input className={css.input}
@@ -34,11 +35,7 @@ export default function Search () {
                    value={request}
             />
 
-
-            <Link to={'?page=1'}>
-                <button className='cleanSearch' onClick={cleanSearchField}>Clean</button>
-            </Link>
-
+            <button className='cleanSearch' onClick={cleanSearchField}>Clean</button>
 
         </div>
     );

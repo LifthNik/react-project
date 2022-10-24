@@ -1,10 +1,11 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 
-import {Button, createTheme, FormControlLabel, FormGroup, Switch, ThemeProvider} from "@mui/material";
-import css from './ThemeSwitcher.module.css'
+import {Button, createTheme, ThemeProvider} from "@mui/material";
 
 import {themeActions} from "../../redux";
+
+import css from './ThemeSwitcher.module.css'
 
 
 export default function ThemeSwitcher () {
