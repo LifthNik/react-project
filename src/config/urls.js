@@ -6,7 +6,7 @@ let urls = {
     movies: '/discover/movie',
     movie: '/movie',
     genres: '/genre/movie/list',
-    search: '/search/keyword?query=',
+    search: '/search/movie?query=',
 
 
 }
