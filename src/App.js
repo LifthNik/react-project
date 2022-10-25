@@ -16,8 +16,6 @@ function App() {
 
                 <Route path={'/'} element={<MainLayout/>}/>
 
-                <Route path={'movies'} element={<MainLayout/>}/>
-
                 <Route path={'/movie/:id'} element={<SingleMovie/>}/>
 
             </Routes>
