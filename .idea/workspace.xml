@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="765bb80d-e2ae-43f5-870b-d66eb463b45b" name="Changes" comment="1.1 rework" />
+    <list default="true" id="765bb80d-e2ae-43f5-870b-d66eb463b45b" name="Changes" comment="1.1 rework">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/movieInfo/SingleMovie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movieInfo/SingleMovie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/urls.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +93,7 @@
       <workItem from="1666583333388" duration="429000" />
       <workItem from="1666583777648" duration="61000" />
       <workItem from="1666592353849" duration="236000" />
-      <workItem from="1666695802808" duration="4834000" />
+      <workItem from="1666695802808" duration="7524000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1666205445898</created>
@@ -391,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666700686226</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="1.1 rework">
+      <created>1666700987816</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1666700987816</updated>
+    </task>
+    <task id="LOCAL-00045" summary="1.1 rework">
+      <created>1666701061143</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1666701061143</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

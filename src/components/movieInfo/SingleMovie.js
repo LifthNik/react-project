@@ -10,6 +10,7 @@ import Header from "../header/Header";
 import css from './SingleMovie.css'
 import ReactStars from "react-rating-stars-component";
 import {Badge} from "reactstrap";
+import {Skeleton} from "@mui/material";
 
 
 export default function SingleMovie() {
@@ -91,7 +92,7 @@ export default function SingleMovie() {
 
                 </div>
                 :
-                <h1>No movie</h1>
+                <Skeleton animation={'wave'} width={1150} height={1000}><h1>No movie</h1></Skeleton>
             }
 
         </div>
