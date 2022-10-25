@@ -12,8 +12,6 @@ export default function Movies() {
 
     let {movies} = useSelector(state => state.movie);
 
-    console.log(movies)
-
     let dispatch = useDispatch();
 
     let [query, setQuery] = useSearchParams({page: '1'});
