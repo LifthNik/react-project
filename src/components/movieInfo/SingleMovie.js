@@ -40,7 +40,8 @@ export default function SingleMovie() {
 
     return (<div className='SingleMovie'>
 
-            <Header/>
+            {loading ? (<Skeleton variant={"text"} height={"60px"}/>) : <Header/>}
+
 
             <button className='backButton' onClick={() => navigate(-1)}>Back</button>
 
