@@ -26,8 +26,6 @@ export default function SingleMovie() {
 
     let navigate = useNavigate();
 
-    console.log(movie)
-
 
     return (<div className='SingleMovie'>
 
@@ -39,10 +37,12 @@ export default function SingleMovie() {
 
                     <div className='poster'>
                         <img src={`${posterURL + movie.backdrop_path}`} alt={movie.title}/>
+
                         <div className='genre'>
                             {movie.genres.map(genre =>
                                 <Badge key={genre.id} color="primary" pill={true}>{genre.name} </Badge>)}
                         </div>
+
                     </div>
 
                     <div className='description'>
@@ -51,7 +51,8 @@ export default function SingleMovie() {
 
 
                         <div className='vote_count'>
-                            Total Votes: {movie.vote_count} <ReactStars
+                            Total Votes: {movie.vote_count}
+                            <ReactStars
                             count={10}
                             value={movie.vote_average}
                             isHalf={true}
@@ -69,7 +70,7 @@ export default function SingleMovie() {
                         </div>
 
                         <div className='language'>
-                            Language: {movie.spoken_languages?.map(lang =>
+                            Language: {movie.spoken_languages.map(lang =>
                             <span key={lang.name}>{lang.english_name} </span>)}
                         </div>
 
