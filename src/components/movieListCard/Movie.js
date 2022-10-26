@@ -4,6 +4,8 @@ import GenreBarge from "../genreBarge/GenreBarge";
 
 import css from "./Movie.module.css"
 import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {Skeleton} from "@mui/material";
 
 
 export default function Movie ({movie}) {
@@ -13,12 +15,23 @@ export default function Movie ({movie}) {
         release_date} = movie;
 
 
+    //Skeleton
+    let [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(()=> {
+            setLoading(false)}, 1000);
+    });
+
+
     return (
 
 
         <Link className={css.Movie} to={`/movie/${movie.id}`}>
 
-            <div className='movieCard'>
+            {loading ? (<Skeleton variant={'rounded'} width={'100%'} height={'500px'}/>)
+                :
+                <div className='movieCard'>
 
                 <PosterPreview title={title} poster={poster_path}/>
 
@@ -34,7 +47,7 @@ export default function Movie ({movie}) {
 
                 <StarRating movie={movie}/>
 
-            </div>
+            </div>}
 
         </Link>
     );
