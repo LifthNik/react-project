@@ -29,7 +29,7 @@ export default function Movie ({movie}) {
 
         <Link className={css.Movie} to={`/movie/${movie.id}`}>
 
-            {loading ? (<Skeleton variant={'rounded'} width={'100%'} height={'500px'}/>)
+            {loading ? (<Skeleton variant={'rounded'} width={'100%'} height={'619px'}/>)
                 :
                 <div className='movieCard'>
 
