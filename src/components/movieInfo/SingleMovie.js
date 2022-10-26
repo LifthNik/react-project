@@ -33,7 +33,7 @@ export default function SingleMovie() {
 
     useEffect(() => {
         setTimeout(() => {
-            setLoading(false)},2000)
+            setLoading(false)},1000)
     })
 
     return (<div className='SingleMovie'>
@@ -129,7 +129,7 @@ export default function SingleMovie() {
 
                 </div>
                 :
-                <h1>No movie</h1>}
+                <h1>No movie found</h1>}
 
         </div>
     );
